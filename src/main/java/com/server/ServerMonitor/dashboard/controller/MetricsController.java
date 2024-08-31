@@ -5,7 +5,6 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 import com.server.ServerMonitor.dashboard.dto.CpuUsageTimestampDTO;
-import com.server.ServerMonitor.dashboard.model.MetricsData;
 import com.server.ServerMonitor.dashboard.service.SystemMetricesService;
 import java.util.HashMap;
 import java.util.List;
@@ -49,10 +48,10 @@ public class MetricsController {
     } 
 
 
-    @GetMapping("/latest")
-    public MetricsData getLatestMetricsData() {
-        return metricsService.getLatestMetricsData();
-    }
+    // @GetMapping("/latest")
+    // public MetricsData getLatestMetricsData() {
+    //     return metricsService.getLatestMetricsData();
+    // }
 
     @GetMapping ("/cpu/usage")
     public int getCpuUsage () {
