@@ -1,6 +1,7 @@
 package com.server.ServerMonitor.dashboard.controller;
 
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.CrossOrigin;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
@@ -12,6 +13,10 @@ import java.util.Map;
 
 @RestController
 @RequestMapping("/metrics")
+@CrossOrigin(origins = {
+    "https://server-monitor-mandal.netlify.app/",
+})
+
 public class MetricsController {
 
     @Autowired
